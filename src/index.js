@@ -1,6 +1,4 @@
-module.exports = function reverse (n)
-{
+module.exports = function reverse (n){
 	n = n + "";
-	return n.split("").reverse().join("");
+	return +n.split("").reverse().join("");
 }
-

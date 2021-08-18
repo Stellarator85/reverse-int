@@ -1,13 +1,12 @@
-module.exports = function reverse (n) {
-        let rev_n = 0;
-        while(n > 0)
-        {
-            rev_n = rev_n * 10 + n % 10;
-            n = Math.floor(n / 10);
-        }
-        return rev_n;
+var rev_num = 0;
+var base_pos = 1;
+module.exports = function reverse (n)
+{
+    if(n > 0)
+    {
+        reverse(Math.floor(n/10));
+        rev_num += (n%10)*base_pos;
+        base_pos *= 10;
     }
-
-
-
-
+    return rev_num;
+}
